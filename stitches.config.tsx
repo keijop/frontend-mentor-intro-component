@@ -25,6 +25,22 @@ export const { styled, css } = createStitches({
 })
 
 export const globalStyles = globalCss({
-  html: { margin: 0, height: '100%' },
-  body: { height: '100%' },
+  html: {
+    margin: 0,
+    height: '100%',
+    width: '1440px',
+  },
+  body: {
+    margin: 0,
+    height: '100%',
+    color: 'white',
+    fontFamily: '$poppins',
+    '& [id="root"]': {
+      height: '100%',
+      backgroundColor: '$red500',
+    },
+    '& p': {
+      fontSize: '$1',
+    },
+  },
 })
