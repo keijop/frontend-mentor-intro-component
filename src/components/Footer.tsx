@@ -21,7 +21,7 @@ const Footer = () => {
         <a href='https://www.frontendmentor.io?ref=challenge' target='_blank'>
           Frontend Mentor
         </a>
-        . Coded by <a href='#'>Keijo P</a>.
+        . Coded by <a href='https://github.com/keijop'>Keijo P</a>.
       </p>
     </StyledFooter>
   )

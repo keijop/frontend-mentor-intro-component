@@ -1,6 +1,10 @@
 import { createStitches, globalCss } from '@stitches/react'
 
 export const { styled, css } = createStitches({
+  media: {
+    bp1: '(max-width: 900px)',
+    bp2: '(max-width: 1200px)',
+  },
   theme: {
     colors: {
       red500: 'hsl(0, 100%, 74%)',
@@ -21,26 +25,31 @@ export const { styled, css } = createStitches({
     fontSizes: {
       1: '16px',
     },
+    radii: {
+      borderRadius: '8px',
+    },
+    shadows: {
+      boxShadow: '0 8px 0 0 rgba(8,8,8,0.2)',
+    },
   },
 })
 
 export const globalStyles = globalCss({
+  root: {
+    boxSizing: 'border-box',
+  },
   html: {
+    height: '100vh',
     margin: 0,
-    height: '100%',
-    width: '1440px',
   },
   body: {
     margin: 0,
-    height: '100%',
     color: 'white',
+    fontSize: '$1',
     fontFamily: '$poppins',
     '& [id="root"]': {
       height: '100%',
       backgroundColor: '$red500',
-    },
-    '& p': {
-      fontSize: '$1',
     },
   },
 })

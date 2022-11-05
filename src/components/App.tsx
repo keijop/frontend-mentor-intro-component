@@ -1,32 +1,32 @@
 import { globalStyles, styled } from '../../stitches.config'
 import Footer from './Footer'
-import Section from './Section'
-import Wrapper from './Wrapper'
+import { StyledMainContainer } from './StyledCommonComponents'
+import TextSection from './TextSection'
+import FormSection from './FormSection'
 
-const StyledApp = styled('div', {
-  height: '100%',
+const Wrapper = styled('div', {
+  position: 'relative',
+  height: '100vh',
   width: '100%',
+  backgroundImage: 'url("../../assets/bg-intro-desktop.png")',
+  backgroundRepeat: 'repeat',
+  backgroundSize: 'cover',
+  '@bp1': {
+    height: '100%',
+    padding: '4rem 0',
+  },
 })
 
 export const App = () => {
   globalStyles()
   return (
-    <StyledApp className='App'>
-      <Wrapper>
-        <Section>
-          <h1>Learn to code by watching others </h1>
-          <p>
-            See how experienced developers solve problems in real-time. Watching
-            scripted tutorials is great, but understanding how developers think
-            is invaluable. Try it free 7 days then $20/mo. thereafter First Name
-            Last Name Email Address Password Claim your free trial By clicking
-            the button, you are agreeing to our Terms and Services
-          </p>
-        </Section>
-        <Section />
-      </Wrapper>
+    <Wrapper className='App'>
+      <StyledMainContainer>
+        <TextSection />
+        <FormSection />
+      </StyledMainContainer>
       <Footer />
-    </StyledApp>
+    </Wrapper>
   )
 }
 
